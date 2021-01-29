@@ -201,4 +201,25 @@
 // }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ATM ////////////////////////////
+var balance=2000;
+var q=prompt("Enter a money amount to withdraw:")
+console.log(ATM(q))
+var q1=prompt("Do you wanna continue? (Y) or (N)")
 
+do{
+var q=prompt("Enter a money amount to withdraw:")
+ATM(q);
+var q1=prompt("Do you wanna continue? (Y) or (N)")
+
+}while(q1=="Y")
+console.log("Thank you for choosing SaidBank :)")
+function ATM(){
+  if(q%5==0){
+    balance =parseInt( balance - q - 0.50);
+    rem = alert("You have withdrawn "+ q +"$ \n Your remaining budget is "+ Number(balance) +"$. \n Transaction fee : 0.50 $ ")
+  }else{
+    rem = alert("please enter amount in times of 5")
+  }
+  return rem
+}
