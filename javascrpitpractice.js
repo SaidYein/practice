@@ -202,24 +202,204 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ATM ////////////////////////////
-var balance=2000;
-var q=prompt("Enter a money amount to withdraw:")
-console.log(ATM(q))
-var q1=prompt("Do you wanna continue? (Y) or (N)")
+// var balance=2000;
+// var q=prompt("Enter a money amount to withdraw:")
+// console.log(ATM(q))
+// var q1=prompt("Do you wanna continue? (Y) or (N)")
 
-do{
-var q=prompt("Enter a money amount to withdraw:")
-ATM(q);
-var q1=prompt("Do you wanna continue? (Y) or (N)")
+// do{
+// var q=prompt("Enter a money amount to withdraw:")
+// ATM(q);
+// var q1=prompt("Do you wanna continue? (Y) or (N)")
 
-}while(q1=="Y")
-console.log("Thank you for choosing SaidBank :)")
-function ATM(){
-  if(q%5==0){
-    balance =parseInt( balance - q - 0.50);
-    rem = alert("You have withdrawn "+ q +"$ \n Your remaining budget is "+ Number(balance) +"$. \n Transaction fee : 0.50 $ ")
-  }else{
-    rem = alert("please enter amount in times of 5")
+// }while(q1=="Y")
+// console.log("Thank you for choosing SaidBank :)")
+// function ATM(){
+//   if(q%5==0){
+//     balance =parseInt( balance - q - 0.50);
+//     rem = alert("You have withdrawn "+ q +"$ \n Your remaining budget is "+ Number(balance) +"$. \n Transaction fee : 0.50 $ ")
+//   }else{
+//     rem = alert("please enter amount in times of 5")
+//   }
+//   return rem
+// }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///EVEN FIBONACCI NUMBERS LESS THAN 1000////30-01-2021
+
+// var arr=[1,1];
+// do{
+//   arr[1]=arr[0]+arr[1];
+//   if(arr[1]%2==0){
+//     console.log(arr[1]);
+//   }
+//   arr[0]=arr[0]+arr[1];
+//   if(arr[0]%2==0 && arr[0]<1000){
+//     console.log(arr[0]);
+//   }
+// }while(arr[0]<1000 && arr[1]<1000)
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// const greet = name => `Hello  ${name} `;
+// let result=greet("Said");
+// console.log(result);
+
+// let products=[];
+// let p=prompt("Enter the number of products")
+// let tax=0.2;
+
+// for(let i=0; i<p; i++){
+//   products.push(prompt("Enter the price of product no."+ (i+1)))
+// }
+
+// const bill = (products, tax) => {
+//   let total=0;
+
+//   for(let i=0; i<products.length; i++){
+//     total+= products[i] + products[i]*tax;
+//   }
+//   return total;
+// }
+// console.log(bill(products, tax));
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Keeping Even numbers in Array//
+// let arr=[];
+// for(i=0; i<10; i++){
+//   arr.push(+prompt("add a number to array." +[10-i]+" left."))
+// }
+// console.log(arr);
+
+// function isEven(num){
+//   return num%2===0;
+// }
+
+// result=arr.filter(isEven);
+
+// console.log(result);
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//CALCULATOR - CALLBACK FUNCTIONS/////
+// let arr=[
+//   add = (a,b) => a + b,
+//   subtract = (a,b) => a-b, 
+//   multiply = (a,b) => a*b,
+//   divide = (a,b) => (a/b).toFixed(1)
+//   ]
+// let x = prompt("enter a number:");
+// let y = prompt("enter the second:");
+// let i = prompt("enter an operator:\n 1. (1) add \n 2. (2) subtract\n 3. (3) multiply\n 4. (4) divide");
+
+// calculator = (num1, num2, operation) => console.log(operation(num1, num2));
+
+// calculator(x,y,arr[i-1]);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum. ////
+
+// let num=prompt("How many element do you want to use?");
+// let arr=[];
+// let sumSq=[];
+
+// for(i=1; i<=num; i++){
+//   arr.push(i);
+// }
+
+// for(i=0; i<num; i++){
+//   sumSq[i]=arr[i]*arr[i];
+// }
+
+// function sumOfTheSquares(){
+//   return sumSq.reduce((a, b) => a + b, 0);
+// }
+
+// function squaresOfTheSum(){
+//   let sum = arr.reduce((a, b) => a + b, 0);
+//   return sum*sum;
+// }
+
+// function difference(a,b){
+//   return a()-b();
+// }
+
+// console.log(difference(squaresOfTheSum, sumOfTheSquares));
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// CALL-BACK (Higher Order) FUNCTION - CEMIL HOCA EX.//
+
+// function getNumber(){
+//   return num = prompt("Your Number:")
+// }
+
+// function yazdır(item){
+//   return console.log("Your number is :" + item())
+// }
+
+// yazdır(getNumber);
+
+//ANOTHER EXAMPLE:_________________________________
+
+// const getUserName = function (callback){
+//   const name=prompt('enter your name');
+//   callback(name);
+// }
+
+// const greet = function (isim){
+//   console.log("Hello "+isim)
+// }
+
+// getUserName(greet)
+
+
+//ARROW FUNCTION HALI_____________________
+
+// const getUserName = function (callback){
+//   const name=prompt('enter your name');
+//   callback(name);
+// }
+
+// getUserName((name) => console.log("hello " + name))
+
+///////////////////////////////////////////////////////
+
+// //HELPER FUNCTION
+
+// function rakam(){
+//   let r=prompt("rakam?");
+//   yaz(r);
+// }
+
+// function yaz(sayı){
+//   console.log("toplam: "+ sayı);
+// }
+
+// rakam(yaz);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//given numbers in array, sort them from big to small///////////////
+// var arr = [];
+// var i = 0;
+// while( i < 10){
+//   let x = prompt("Enter a number");
+//     if(x*0==0){
+//       arr.push(x);
+//       i++;
+//     }else{
+//      console.log("Not a number")
+//     }
+// }
+// console.log(...arr);
+// arr.sort((a,b)=>a-b);
+// console.log(arr);
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// FINDING HIGHEST PRODUCT OF 2 ADJACENT NUMBERS IN THE STRING ///
+let str="7316717653133062491992511967442657474235534919";
+let arr=str.split('')
+let base = 1;
+let k=1;
+
+  for(i=0; i<arr.length-1; i++){
+      let x=arr[i]*arr[i+1];
+      if(x>base){
+        k=i;
+        base=x;
+      }
   }
-  return rem
-}
+  
+console.log(`adjacent items with highest product are : ${arr[k]} and ${arr[k+1]}. Their plcaes in the array are ${k} and ${k+1} respectively.`)
